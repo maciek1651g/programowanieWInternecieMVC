@@ -1,0 +1,23 @@
+{
+  "name": "programowaniewinternecie",
+  "version": "1.0.0",
+  "description": "Repozytorium strony na zajęcia z programowania w internecie",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maciek1651g/programowanieWInternecie.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maciek1651g/programowanieWInternecie/issues"
+  },
+  "homepage": "https://github.com/maciek1651g/programowanieWInternecie#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1"
+  }
+}

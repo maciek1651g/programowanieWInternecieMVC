@@ -1,0 +1,158 @@
+body
+{
+	background-color: #d1d1d1;
+	margin: 0 auto;
+	box-sizing: border-box;
+	max-width:1000px;
+}
+
+.banner
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fff;
+	margin: 0px 5px;
+	text-align: center;
+}
+
+.nav
+{
+	background-color: #333;
+	height: 50px;
+	margin: 0 5px;
+}
+
+.menu
+{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.footer
+{
+	width: 100%;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer > p
+{
+	margin: 0;
+}
+
+.li
+{
+	width: 20%;
+}
+
+.link
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin:0px;
+	width: 100%;
+	height: 100%;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	padding: 15px 0;
+	box-sizing: border-box;
+}
+
+.li:hover
+{
+	background-color: #ddd;
+}
+
+.li:hover > .link
+{
+	color: black;
+}
+
+.main
+{
+	display: flex;
+	margin: 5px 0px 35px;
+	max-width: inherit;
+}
+
+
+.leftcolumn
+{
+	width:100%;
+}
+
+.zdjecie 
+{
+  background-color: #aaa;
+  height:300px;
+  padding: 20px;
+}
+
+.artykul
+{
+	background-color: white;
+	padding:30px;
+	margin:10px 5px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.input
+{
+	margin: 10px;
+}
+
+.inputName
+{
+	margin-right: 10px;
+}
+
+.board
+{
+	width: 80%;
+}
+
+img 
+{
+	max-width: 100%;
+	height: auto;
+}
+
+@media only screen and (max-width: 1000px) 
+{
+	body
+	{
+		font-size: 20px;
+		min-width: 480px;
+	}
+
+	.link
+	{
+		font-size: 20px;
+	}
+
+	.main
+	{
+		flex-direction: column;
+	}
+
+}
