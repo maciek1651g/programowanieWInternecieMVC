@@ -24,7 +24,8 @@ const Main = () => {
 			return;
 		}
 
-		fetch("http://localhost:3000/"+age+"/"+sex+"/"+smoke+"/"+live+"/"+weight+"/"+height)
+		//fetch("http://localhost:3000/"+age+"/"+sex+"/"+smoke+"/"+live+"/"+weight+"/"+height)
+		fetch("https://https://maciejdominiak-mvc.herokuapp.com/"+age+"/"+sex+"/"+smoke+"/"+live+"/"+weight+"/"+height)
 			.then((res)=>res.json())
 			.then((data)=>{
 				setAge("W przybliżeniu, pozostało Ci "+data+" lat życia.");
