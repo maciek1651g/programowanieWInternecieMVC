@@ -8,6 +8,7 @@ const random = (min, max) => {
 }
 
 const calculate = (age, sex, smoke, live, weight, height) => {
+    height=height/100;
     const bmi = weight/(height*height);
 
     let result = age;

@@ -9,14 +9,14 @@ const Main = () => {
 
 	const calculate = (event) => {
 		event.preventDefault();
-		const age = $("age").value;
-		const sex = $("men").checked?0:1;
-		const sex2 = $("women").checked?0:1;
-		const smoke = $("no").checked?0:1;
-		const smoke2 = $("yes").checked?0:1;
-		const live = $("city").value;
-		const weight = $("weight").value;
-		const height = $("height").value/100;
+		const age = parseInt($("age").value);
+		const sex = parseInt($("men").checked?0:1);
+		const sex2 = parseInt($("women").checked?0:1);
+		const smoke = parseInt($("no").checked?0:1);
+		const smoke2 = parseInt($("yes").checked?0:1);
+		const live = parseInt($("city").value);
+		const weight = parseInt($("weight").value);
+		const height = parseInt($("height").value);
 
 		if(age==="" || weight==="" || height===0 ||  sex===sex2 || smoke===smoke2)
 		{
