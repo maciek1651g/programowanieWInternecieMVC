@@ -1,5 +1,6 @@
 import styles from './style.module.css'
 import React from 'react';
+import ClientAPI from "./ClientAPI";
 
 const $ = (id) => document.getElementById(id);
 
@@ -24,15 +25,13 @@ const Main = () => {
 			return;
 		}
 
-		//fetch("http://localhost:3000/"+age+"/"+sex+"/"+smoke+"/"+live+"/"+weight+"/"+height)
-		fetch("https://maciejdominiak-mvc.herokuapp.com/"+age+"/"+sex+"/"+smoke+"/"+live+"/"+weight+"/"+height)
-			.then((res)=>res.json())
-			.then((data)=>{
-				setAge("W przybliżeniu, pozostało Ci "+data+" lat życia.");
-			})
-			.catch((err)=>{
-				setAge("Błąd podczas wysyłania zapytania");
-			});
+
+		const api = new ClientAPI();
+		api.ageRequest(age,sex,smoke,live,weight,height, (res)=>{
+			setAge("W przybliżeniu, pozostało Ci "+res+" lat życia.");
+		}, (err)=>{
+			setAge("Błąd podczas wysyłania zapytania");
+		})
 	}
 
     return (
