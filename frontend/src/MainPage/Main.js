@@ -5,7 +5,7 @@ const $ = (id) => document.getElementById(id);
 
 
 const Main = () => {
-	const [showAge, setAge] = React.useState(null);
+	const [showAge, setAge] = React.useState("Tutaj pojawi się informacja zwrotna.");
 
 	const calculate = (event) => {
 		event.preventDefault();
@@ -18,7 +18,7 @@ const Main = () => {
 		const weight = parseInt($("weight").value);
 		const height = parseInt($("height").value);
 
-		if(age==="" || weight==="" || height===0 ||  sex===sex2 || smoke===smoke2)
+		if(isNaN(age) || isNaN(weight) || height===0 ||  sex===sex2 || smoke===smoke2)
 		{
 			setAge("Uzupełnij wszystkie pola!");
 			return;
@@ -88,7 +88,10 @@ const Main = () => {
 							</div>
 							<button onClick={calculate}>Oblicz liczbę pozostałych lat życia</button>
 						</form>
-						{showAge!==null? <div><p>{showAge}</p></div> : null}
+						<div style={{fontSize: "20px"}}>
+							{showAge!==null? <p>{showAge}</p>: null}
+						</div>
+
 					</div>
 				</article>
 			</section>
